@@ -1,1 +1,1 @@
-•π•È•§•…§œ[§≥§¡§È](https://ymattu.github.io/TokyoR60/LT.html)
+„Çπ„É©„Ç§„Éâ„ÅØ[„Åì„Å°„Çâ](https://ymattu.github.io/TokyoR60/LT.html)
