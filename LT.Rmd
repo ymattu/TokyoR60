@@ -29,9 +29,9 @@ knitr::opts_chunk$set(echo = TRUE,
 - 松村優哉
 - <u>Twitter</u>: **y\_\_mattu**
 - <u>GitHub</u>: **ymattu**
-- M1(R 歴: 2 年)
+- M1
 - 計量経済学、ベイズ統計、因果推論、マーケティング
-- 言語: R, SAS, Python
+- 言語: R(2 年), SAS, Python
 - https://ymattu.github.io/
 - http://y-mattu.hatenablog.com/
 - Tokyo.R 運営チーム
@@ -154,3 +154,6 @@ DT::datatable(ip, options = list(
 .pull-right[
 ![docker](./slide_img/docker.png)
 ]
+
+- スライドは{xaringan}パッケージで作りました
+- 元の Rmd などは GitHub にあります。 <br> https://github.com/ymattu/TokyoR60
