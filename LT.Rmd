@@ -1,5 +1,5 @@
 ---
-title: "Docker で <br> RStudio Server + MeCab + tidyverse (+ 日本語)"
+title: "Docker で <br> RStudio Server + MeCab + tidyverse <br> (+ 日本語)"
 author: "@y__mattu"
 date: "2017/4/22 Tokyo.R #60"
 output:
@@ -49,8 +49,8 @@ knitr::opts_chunk$set(echo = TRUE,
 - MeCab と RMeCab について
 - Docker について
 - mecab-d の使い方
----
 
+---
 # RStudio Server について
 
 ## 用途
@@ -99,13 +99,14 @@ RMeCabC("今日は土曜日です")
 
 ---
 # Docker イメージを作った(**`mecab-d`**)
-### Docker Hub にあります
+#### Docker Hub にあります
 https://hub.docker.com/r/ymattu/mecab-d/
 
-### こんなのが入ったコンテナが構築できます
+#### こんなのが入ってます
 - RStudio Server
 - tidyverse なパッケージ群
 - MeCab
+- IPA 辞書
 - {RMeCab}パッケージ
 - TeX 環境
 - IPAex フォント→ ggplot2 の日本語も豆腐化しない!
@@ -127,6 +128,18 @@ docker run -p 8787:8787 -v /Users/ymattu/Desktop:/home/rstudio -d --name mattu y
 アドレスバーに localhost:8787 と入力
 
 ![screenshot](./slide_img/screenshot.png)
+
+---
+# 付録: 入っている R パッケージ
+
+```{r echo=FALSE}
+load("./LT_files/ip.rda")
+DT::datatable(ip, options = list(
+  dom = 't',
+  pageLength = 200,
+  deferRender = TRUE,
+  scrollY = 350))
+```
 
 ---
 # Enjoy!
