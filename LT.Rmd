@@ -34,6 +34,7 @@ knitr::opts_chunk$set(echo = TRUE,
 - 言語: R, SAS, Python
 - https://ymattu.github.io/
 - http://y-mattu.hatenablog.com/
+- Tokyo.R 運営チーム
 
 ]
 
