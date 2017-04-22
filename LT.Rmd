@@ -49,6 +49,9 @@ knitr::opts_chunk$set(echo = TRUE,
 - Docker について
 - mecab-d の使い方
 
+### 以前のブログ記事と同じ内容です
+http://y-mattu.hatenablog.com/entry/2017/03/28/002200
+
 ---
 # RStudio Server について
 
