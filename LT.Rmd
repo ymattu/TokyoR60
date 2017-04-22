@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE,
 - 松村優哉
 - <u>Twitter</u>: **y\_\_mattu**
 - <u>GitHub</u>: **ymattu**
-- M1
+- M1(R 歴: 2 年)
 - 計量経済学、ベイズ統計、因果推論、マーケティング
 - 言語: R, SAS, Python
 - https://ymattu.github.io/
