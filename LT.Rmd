@@ -1,5 +1,5 @@
 ---
-title: "Docker で (R)MeCab の環境構築"
+title: "Docker で <br> RStudio Server + MeCab + tidyverse (+ 日本語)"
 author: "@y__mattu"
 date: "2017/4/22 Tokyo.R #60"
 output:
@@ -40,6 +40,15 @@ knitr::opts_chunk$set(echo = TRUE,
 .pull-right[
 ![icon](./slide_img/twitter_icon.jpg)
 ]
+---
+
+---
+# はじめに
+## 今日のお話
+- RStudio Server について
+- MeCab と RMeCab について
+- Docker について
+- mecab-d の使い方
 ---
 
 # RStudio Server について
