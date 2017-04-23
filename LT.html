@@ -24,6 +24,26 @@ class: center, middle, inverse, title-slide
 
 
 
+&lt;style type="text/css"&gt;
+/* echo=true 時の r 出力ブロック */
+.remark-slide-content &gt; pre:first-of-type {
+  overflow: auto;
+  max-height: 15em;
+}
+
+/* echo=false 時の出力ブロック */
+.remark-slide-content &gt; pre:only-of-type {
+  overflow-y: auto;
+  max-height: 40em;
+}
+
+/* echo=true 時の出力ブロック */
+.remark-slide-content &gt; pre ~ pre {
+  overflow-y: auto;
+  max-height: 20em;
+}
+&lt;/style&gt;
+
 
 # はじめに
 ## 自己紹介
@@ -101,25 +121,37 @@ install.packages ("RMeCab", repos = "http://rmecab.jp/R")
 
 ```r
 library(RMeCab)
-RMeCabC("今日は土曜日です")
+RMeCabC("すもももももももものうち")
 ```
 
 ```
 [[1]]
-  名詞 
-"今日" 
+    名詞 
+"すもも" 
 
 [[2]]
 助詞 
-"は" 
+"も" 
 
 [[3]]
-    名詞 
-"土曜日" 
+  名詞 
+"もも" 
 
 [[4]]
-助動詞 
-"です" 
+助詞 
+"も" 
+
+[[5]]
+  名詞 
+"もも" 
+
+[[6]]
+助詞 
+"の" 
+
+[[7]]
+  名詞 
+"うち" 
 ```
 
 ---
@@ -159,8 +191,8 @@ docker run -p 8787:8787 -v /Users/ymattu/Desktop:/home/rstudio -d --name mattu y
 ---
 # 付録: 入っている R パッケージ
 
-<div id="htmlwidget-605203cefecd2b6f266d" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-605203cefecd2b6f266d">{"x":{"filter":"none","data":[["acepack","assertthat","backports","base64enc","BH","BiocInstaller","bitops","bookdown","brew","broom","caTools","checkmate","colorspace","commonmark","covr","crayon","curl","data.table","DBI","desc","devtools","dichromat","digest","docopt","doParallel","dplyr","dtplyr","evaluate","forcats","foreach","formatR","Formula","gdtools","ggplot2","ggplot2movies","git2r","githubinstall","gmailr","gridBase","gridExtra","gtable","haven","hexbin","highr","Hmisc","hms","htmlTable","htmltools","htmlwidgets","httpuv","httr","hunspell","igraph","irlba","iterators","jsonlite","knitr","labeling","Lahman","latticeExtra","lazyeval","lintr","littler","lubridate","magrittr","mapproj","maps","maptools","markdown","MatrixModels","memoise","microbenchmark","mime","miniUI","mnormt","modelr","multcomp","munsell","mvtnorm","NLP","NMF","nycflights13","openssl","packrat","pingr","pkgmaker","PKI","plogr","plyr","praise","profvis","psych","purrr","quantreg","R6","RColorBrewer","Rcpp","RCurl","readr","readxl","registry","remotes","reshape2","rex","RJSONIO","rmarkdown","rmdshower","RMeCab","RMySQL","rngtools","roxygen2","RPostgreSQL","rprojroot","rsconnect","RSQLite","rstudioapi","rticles","rversions","rvest","sandwich","scales","selectr","servr","shiny","slam","sourcetools","sp","SparseM","stringdist","stringi","stringr","svglite","testit","testthat","TH.data","tibble","tidyr","tidyverse","tm","tufte","viridis","webshot","whisker","withr","xml2","xtable","yaml","zoo"],["acepack","assertthat","backports","base64enc","BH","BiocInstaller","bitops","bookdown","brew","broom","caTools","checkmate","colorspace","commonmark","covr","crayon","curl","data.table","DBI","desc","devtools","dichromat","digest","docopt","doParallel","dplyr","dtplyr","evaluate","forcats","foreach","formatR","Formula","gdtools","ggplot2","ggplot2movies","git2r","githubinstall","gmailr","gridBase","gridExtra","gtable","haven","hexbin","highr","Hmisc","hms","htmlTable","htmltools","htmlwidgets","httpuv","httr","hunspell","igraph","irlba","iterators","jsonlite","knitr","labeling","Lahman","latticeExtra","lazyeval","lintr","littler","lubridate","magrittr","mapproj","maps","maptools","markdown","MatrixModels","memoise","microbenchmark","mime","miniUI","mnormt","modelr","multcomp","munsell","mvtnorm","NLP","NMF","nycflights13","openssl","packrat","pingr","pkgmaker","PKI","plogr","plyr","praise","profvis","psych","purrr","quantreg","R6","RColorBrewer","Rcpp","RCurl","readr","readxl","registry","remotes","reshape2","rex","RJSONIO","rmarkdown","rmdshower","RMeCab","RMySQL","rngtools","roxygen2","RPostgreSQL","rprojroot","rsconnect","RSQLite","rstudioapi","rticles","rversions","rvest","sandwich","scales","selectr","servr","shiny","slam","sourcetools","sp","SparseM","stringdist","stringi","stringr","svglite","testit","testthat","TH.data","tibble","tidyr","tidyverse","tm","tufte","viridis","webshot","whisker","withr","xml2","xtable","yaml","zoo"],["1.4.1","0.1","1.0.5","0.1-3","1.62.0-1","1.24.0","1.0-6","0.3","1.0-6","0.4.2","1.17.1","1.8.2","1.3-2","1.2","2.2.2","1.3.2","2.3","1.10.4","0.6","1.1.0","1.12.0","2.0-0","0.6.12","0.4.5","1.0.10","0.5.0","0.0.1","0.10","0.2.0","1.4.3","1.4","1.2-1","0.1.4","2.2.1","0.0.1","0.18.0","0.2.1","0.7.1","0.4-7","2.2.1","0.2.0","1.0.0","1.27.1","0.6","4.0-2","0.3","1.9","0.3.5","0.8","1.3.3","1.2.1","2.3","1.0.1","2.1.2","1.0.8","1.3","1.15.1","0.3","5.0-0","0.6-28","0.2.0","1.0.0","0.3.2","1.6.0","1.5","1.2-4","3.1.1","0.9-1","0.7.7","0.4-1","1.0.0","1.4-2.1","0.5","0.1.1","1.5-5","0.1.0","1.4-6","0.4.3","1.0-6","0.1-10","0.20.6","0.2.2","0.9.6","0.4.8-1","1.1.2","0.22","0.1-3","0.1-1","1.8.4","1.0.0","0.3.3","1.6.12","0.2.2","5.29","2.2.0","1.1-2","0.12.10","1.95-4.8","1.0.0","0.1.1","0.3","1.0.0","1.4.2","1.1.1","1.3-0","1.3","2.0.0","0.99996","0.10.9","1.2.4","6.0.1","0.4-1","1.2","0.7","1.1-2","0.6","0.2","1.0.3","0.3.2","2.3-4","0.4.1","0.3-1","0.5","1.0.0","0.1-40","0.1.5","1.2-4","1.76","0.9.4.4","1.1.2","1.2.0","1.2.0","0.6","1.0.2","1.0-8","1.2","0.6.1","1.1.1","0.7-1","0.2","0.3.4","0.4.0","0.3-2","1.0.2","1.1.1","1.8-2","2.1.14","1.7-14"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Package<\/th>\n      <th>Version<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","pageLength":200,"deferRender":true,"scrollY":350,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[10,25,50,100,200]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e81e439e6ed2fa1672d1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e81e439e6ed2fa1672d1">{"x":{"filter":"none","data":[["acepack","assertthat","backports","base64enc","BH","BiocInstaller","bitops","bookdown","brew","broom","caTools","checkmate","colorspace","commonmark","covr","crayon","curl","data.table","DBI","desc","devtools","dichromat","digest","docopt","doParallel","dplyr","dtplyr","evaluate","forcats","foreach","formatR","Formula","gdtools","ggplot2","ggplot2movies","git2r","githubinstall","gmailr","gridBase","gridExtra","gtable","haven","hexbin","highr","Hmisc","hms","htmlTable","htmltools","htmlwidgets","httpuv","httr","hunspell","igraph","irlba","iterators","jsonlite","knitr","labeling","Lahman","latticeExtra","lazyeval","lintr","littler","lubridate","magrittr","mapproj","maps","maptools","markdown","MatrixModels","memoise","microbenchmark","mime","miniUI","mnormt","modelr","multcomp","munsell","mvtnorm","NLP","NMF","nycflights13","openssl","packrat","pingr","pkgmaker","PKI","plogr","plyr","praise","profvis","psych","purrr","quantreg","R6","RColorBrewer","Rcpp","RCurl","readr","readxl","registry","remotes","reshape2","rex","RJSONIO","rmarkdown","rmdshower","RMeCab","RMySQL","rngtools","roxygen2","RPostgreSQL","rprojroot","rsconnect","RSQLite","rstudioapi","rticles","rversions","rvest","sandwich","scales","selectr","servr","shiny","slam","sourcetools","sp","SparseM","stringdist","stringi","stringr","svglite","testit","testthat","TH.data","tibble","tidyr","tidyverse","tm","tufte","viridis","webshot","whisker","withr","xml2","xtable","yaml","zoo"],["acepack","assertthat","backports","base64enc","BH","BiocInstaller","bitops","bookdown","brew","broom","caTools","checkmate","colorspace","commonmark","covr","crayon","curl","data.table","DBI","desc","devtools","dichromat","digest","docopt","doParallel","dplyr","dtplyr","evaluate","forcats","foreach","formatR","Formula","gdtools","ggplot2","ggplot2movies","git2r","githubinstall","gmailr","gridBase","gridExtra","gtable","haven","hexbin","highr","Hmisc","hms","htmlTable","htmltools","htmlwidgets","httpuv","httr","hunspell","igraph","irlba","iterators","jsonlite","knitr","labeling","Lahman","latticeExtra","lazyeval","lintr","littler","lubridate","magrittr","mapproj","maps","maptools","markdown","MatrixModels","memoise","microbenchmark","mime","miniUI","mnormt","modelr","multcomp","munsell","mvtnorm","NLP","NMF","nycflights13","openssl","packrat","pingr","pkgmaker","PKI","plogr","plyr","praise","profvis","psych","purrr","quantreg","R6","RColorBrewer","Rcpp","RCurl","readr","readxl","registry","remotes","reshape2","rex","RJSONIO","rmarkdown","rmdshower","RMeCab","RMySQL","rngtools","roxygen2","RPostgreSQL","rprojroot","rsconnect","RSQLite","rstudioapi","rticles","rversions","rvest","sandwich","scales","selectr","servr","shiny","slam","sourcetools","sp","SparseM","stringdist","stringi","stringr","svglite","testit","testthat","TH.data","tibble","tidyr","tidyverse","tm","tufte","viridis","webshot","whisker","withr","xml2","xtable","yaml","zoo"],["1.4.1","0.1","1.0.5","0.1-3","1.62.0-1","1.24.0","1.0-6","0.3","1.0-6","0.4.2","1.17.1","1.8.2","1.3-2","1.2","2.2.2","1.3.2","2.3","1.10.4","0.6","1.1.0","1.12.0","2.0-0","0.6.12","0.4.5","1.0.10","0.5.0","0.0.1","0.10","0.2.0","1.4.3","1.4","1.2-1","0.1.4","2.2.1","0.0.1","0.18.0","0.2.1","0.7.1","0.4-7","2.2.1","0.2.0","1.0.0","1.27.1","0.6","4.0-2","0.3","1.9","0.3.5","0.8","1.3.3","1.2.1","2.3","1.0.1","2.1.2","1.0.8","1.3","1.15.1","0.3","5.0-0","0.6-28","0.2.0","1.0.0","0.3.2","1.6.0","1.5","1.2-4","3.1.1","0.9-1","0.7.7","0.4-1","1.0.0","1.4-2.1","0.5","0.1.1","1.5-5","0.1.0","1.4-6","0.4.3","1.0-6","0.1-10","0.20.6","0.2.2","0.9.6","0.4.8-1","1.1.2","0.22","0.1-3","0.1-1","1.8.4","1.0.0","0.3.3","1.6.12","0.2.2","5.29","2.2.0","1.1-2","0.12.10","1.95-4.8","1.0.0","0.1.1","0.3","1.0.0","1.4.2","1.1.1","1.3-0","1.3","2.0.0","0.99996","0.10.9","1.2.4","6.0.1","0.4-1","1.2","0.7","1.1-2","0.6","0.2","1.0.3","0.3.2","2.3-4","0.4.1","0.3-1","0.5","1.0.0","0.1-40","0.1.5","1.2-4","1.76","0.9.4.4","1.1.2","1.2.0","1.2.0","0.6","1.0.2","1.0-8","1.2","0.6.1","1.1.1","0.7-1","0.2","0.3.4","0.4.0","0.3-2","1.0.2","1.1.1","1.8-2","2.1.14","1.7-14"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Package<\/th>\n      <th>Version<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","pageLength":200,"deferRender":true,"scrollY":350,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"lengthMenu":[10,25,50,100,200]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 # Enjoy!

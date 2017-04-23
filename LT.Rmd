@@ -22,6 +22,26 @@ knitr::opts_chunk$set(echo = TRUE,
                       out.width = 400)
 ```
 
+```{css}
+/* echo=true 時の r 出力ブロック */
+.remark-slide-content > pre:first-of-type {
+  overflow: auto;
+  max-height: 15em;
+}
+
+/* echo=false 時の出力ブロック */
+.remark-slide-content > pre:only-of-type {
+  overflow-y: auto;
+  max-height: 40em;
+}
+
+/* echo=true 時の出力ブロック */
+.remark-slide-content > pre ~ pre {
+  overflow-y: auto;
+  max-height: 20em;
+}
+```
+
 
 # はじめに
 ## 自己紹介
@@ -97,7 +117,7 @@ install.packages ("RMeCab", repos = "http://rmecab.jp/R")
 # RMeCab パッケージの出力例
 ```{r }
 library(RMeCab)
-RMeCabC("今日は土曜日です")
+RMeCabC("すもももももももものうち")
 ```
 
 ---
