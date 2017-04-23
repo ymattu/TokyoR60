@@ -148,7 +148,8 @@ docker run -p 8787:8787 -v /Users/ymattu/Desktop:/home/rstudio -d --name mattu y
 
 ---
 # ブラウザでアクセス!
-アドレスバーに localhost:8787 と入力
+- アドレスバーに localhost:8787 と入力
+- ユーザー名、パスともに rstudio
 
 ![screenshot](./slide_img/screenshot.png)
 
